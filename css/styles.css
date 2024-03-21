@@ -90,19 +90,53 @@ a {
 }
 
 /* Nav section */
-
-/* Contacts section */
-.global-header .contact-mail {
-  color: var(--secondary-text-color);
+.main-nav {
+  display: none;
 }
-.global-header .contact-mail:hover {
+.main-nav a,
+.main-nav a:visited {
+  color: var(--primary-text-color);
+}
+.main-nav a:hover {
+  color: #404bbf;
+  text-decoration: none;
+}
+.main-nav .nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  margin-right: 100px;
+}
+.main-nav .nav-link {
+  position: relative;
+  padding-bottom: 20px;
+}
+.main-nav .active-page::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--active-page-bg);
+}
+/* Contacts section */
+.contacts-section {
+  display: none;
+}
+.contacts-section .contact-mail {
+  color: var(--secondary-text-color);
+  margin-right: 40px;
+}
+.contacts-section .contact-mail:hover {
   color: #404bbf;
 }
 
-.global-header .contact-phone {
+.contacts-section .contact-phone {
   color: var(--secondary-text-color);
 }
-.global-header .contact-phone:hover {
+.contacts-section .contact-phone:hover {
   color: #404bbf;
 }
 
@@ -718,35 +752,28 @@ a {
     font-weight: 500;
     display: flex;
   }
-  .main-nav a,
-  .main-nav a:visited {
-    color: var(--primary-text-color);
-  }
-  .main-nav a:hover {
-    color: #404bbf;
-    text-decoration: none;
-  }
-  .main-nav .nav-list {
+  .contacts-section {
     display: flex;
-    justify-content: space-evenly;
-    gap: 40px;
-    margin-right: 100px;
+    flex-direction: column;
   }
-  .main-nav .nav-link {
-    position: relative;
-    padding-bottom: 20px;
+  .contacts-section .contact-mail {
+    color: var(--secondary-text-color);
   }
-  .main-nav .active-page::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--active-page-bg);
+  .contacts-section .contact-mail:hover {
+    color: #404bbf;
+  }
+
+  .contacts-section .contact-phone {
+    color: var(--secondary-text-color);
+  }
+  .contacts-section .contact-phone:hover {
+    color: #404bbf;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .contacts-section {
+    display: flex;
+    flex-direction: row;
+  }
 }
