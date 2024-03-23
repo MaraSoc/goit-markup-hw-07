@@ -26,6 +26,8 @@
   --burger-menu-color: #2e2f42;
   --menu-close-btn-bg: #fff;
   --menu-close-btn-border: #2e2f42;
+  --menu-text-color: #2e2f42;
+  --menu-text-color-active: #404bbf;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -101,6 +103,23 @@ a {
   border-style: none;
   margin-bottom: 24px;
   cursor: pointer;
+}
+.menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 70px;
+}
+.menu-nav-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--menu-text-color);
+}
+.menu-nav a:hover {
+  color: var(--menu-text-color-active);
 }
 /* Header section */
 .global-header {
@@ -819,6 +838,9 @@ a {
     line-height: 1.07143;
     text-align: center;
     color: #fff;
+  }
+  .burger-menu-btn {
+    display: none;
   }
 }
 
