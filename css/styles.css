@@ -77,7 +77,9 @@ a {
   flex-direction: column;
   position: fixed;
   background-color: #fff;
-  z-index: 1;
+  /* z-index: 1; */
+  width: 100%;
+  height: 100%;
 }
 .burger-menu-btn {
   color: var(--burger-menu-color);
@@ -121,6 +123,45 @@ a {
 .menu-nav a:hover {
   color: var(--menu-text-color-active);
 }
+.menu-contacts-section {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: relative;
+}
+.menu-contacts-social-wrap {
+  position: absolute;
+  bottom: 0;
+}
+.menu-icons-list {
+  display: flex;
+  gap: 56px;
+  margin-top: 16px;
+  justify-content: center;
+}
+.menu-icons-list .menu-social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.menu-contacts-social {
+  display: flex;
+  flex-direction: column;
+}
+.menu-icons-list .menu-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--social-icon-color);
+}
+.menu-icons-list .menu-social-icon:hover,
+.menu-icons-list .menu-social-icon:active {
+  background-color: var(--social-icon-bg-color);
+  color: var(--social-icon-color-active);
+}
+
 /* Header section */
 .global-header {
   padding: 24px, 0;
