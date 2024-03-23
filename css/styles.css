@@ -122,16 +122,39 @@ a {
 }
 .menu-nav a:hover {
   color: var(--menu-text-color-active);
+  transition: transform var(--transition);
 }
 .menu-contacts-section {
   display: flex;
   flex-direction: column;
-  align-content: center;
   position: relative;
 }
 .menu-contacts-social-wrap {
   position: absolute;
   bottom: 0;
+}
+.menu-contact-phone {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--menu-text-color);
+}
+.menu-contact-phone:hover {
+  color: var(--menu-text-color-active);
+  transition: transform var(--transition);
+}
+.menu-contact-mail {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--menu-text-color);
+}
+.menu-contact-mail:hover {
+  color: var(--menu-text-color-active);
+  transition: transform var(--transition);
 }
 .menu-icons-list {
   display: flex;
