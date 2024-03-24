@@ -14,22 +14,102 @@
     <link rel="stylesheet" href="./css/modern-normalize.css" />
   </head>
   <body>
+    <div class="js-menu-container">
+      <button class="menu-close-btn js-close-menu">
+        <i data-feather="x"></i>
+      </button>
+
+      <nav class="menu-nav">
+        <ul class="menu-nav-list">
+          <li class="menu-nav-item">
+            <a href="index.html" class="menu-nav-link active-page">Studio</a>
+          </li>
+          <li class="menu-nav-item">
+            <a href="portfolio.html" class="menu-nav-link">Portfolio</a>
+          </li>
+          <li class="menu-nav-item">
+            <a href="contacts.html" class="menu-nav-link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-contacts-social">
+        <div class="menu-contacts-social-wrap">
+          <section class="menu-contacts-section">
+            <a href="tel:+110001111111" class="menu-contact-phone"
+              >+11 (000) 111-11-11</a
+            >
+            <a href="mailto:info@devstudio.com" class="menu-contact-mail"
+              >info@devstudio.com</a
+            >
+          </section>
+          <div class="menu-icons-list">
+            <a
+              href="https://www.instagram.com/"
+              class="menu-social-icon"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+              aria-label="instagram-link"
+            >
+              <svg>
+                <use href="./images/icons.svg.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.twitter.com/"
+              class="menu-social-icon"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+              aria-label="twitter-link"
+            >
+              <svg>
+                <use href="./images/icons.svg.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              class="menu-social-icon"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+              aria-label="facebook-link"
+            >
+              <svg>
+                <use href="./images/icons.svg.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a
+              href="https://ro.linkedin.com/"
+              class="menu-social-icon"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+              aria-label="linkedin-link"
+            >
+              <svg>
+                <use href="./images/icons.svg.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Header section -->
     <header class="global-header">
       <div class="header-section container">
-        <!-- Logo text -->
-        <a href="index.html" class="logo">STUDIO</a>
+        <div>
+          <!-- Logo text -->
+          <a href="index.html" class="logo">STUDIO</a>
+          <button type="button" class="burger-menu-btn js-open-menu">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
 
         <!-- Nav section -->
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="index.html" class="nav-link">Studio</a>
+              <a href="index.html" class="nav-link active-page">Studio</a>
             </li>
             <li>
-              <a href="portfolio.html" class="nav-link active-page"
-                >Portfolio</a
-              >
+              <a href="portfolio.html">Portfolio</a>
             </li>
             <li>
               <a href="contacts.html">Contacts</a>
@@ -38,7 +118,7 @@
         </nav>
 
         <!-- Contacts section -->
-        <section>
+        <section class="contacts-section">
           <a href="mailto:info@devstudio.com" class="contact-mail"
             >info@devstudio.com</a
           >
@@ -347,5 +427,10 @@
         </div>
       </section>
     </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
